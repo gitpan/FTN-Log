@@ -1,0 +1,27 @@
+Revision history for Perl extension FTN::Log.
+
+0.02  Sat May 13 2006
+    - Derive initial version of FTN::Log from FTN::Utility v0.02, which
+    contained only the logging function.  Keep the version number, since
+    that is effectively the version of the function, as well as the
+    history of changes including copyright.
+    
+0.02  Wed Dec 26 2001
+    - in README;  added installation info & included '2002' in copyright
+    statement.
+    
+0.02  Wed Dec 26 2001
+    - in README;  added installation info & included '2002' in copyright
+    statement.
+    
+0.02  Sat Dec  16 2001; by R.J. Clay
+    - Rewrite of logging subroutine
+    - Corrected NAME reference in MakeFile.PL;  module now installs
+    - removed unnecessary reference to t directory in MANIFEST.
+
+      Sun Sep   2 2001
+    - Initial add of logging subroutine; by R.J. Clay
+
+0.01  Sun Jun  10 2001
+    - original version; created by R.J. Clay
+

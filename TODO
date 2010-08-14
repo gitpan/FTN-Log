@@ -1,0 +1,9 @@
+To do:  FTN::Log
+
+- add verbose option? if decide it should be part of subroutine.
+
+- add selectable log formats
+
+- add test subroutine for logging function to t/test.pl
+  
+  
