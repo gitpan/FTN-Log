@@ -1,17 +1,18 @@
 FTN::Log
 
-Copyright (c) 2001-2006 Robert James Clay.  All Rights Reserved.
+Copyright (c) 2001-2008 Robert James Clay.  All Rights Reserved.
 This is free software;  you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
-Perl module for logging with/for fidonet/FTN processing.  
+Perl module for logging of fidonet/FTN processing.  
 
 Various Log functions, including:
 
     logging($logfile, $id, $text)
 
 
-For details, see documentation.
+For more details, see the documentation.  You can also find more information, including the
+code repository, at the FTN::Log home page at http://ftnpl.sourceforge.net/ftnpllog.html.
 
 To install:
   Uncompress the archive, then change to that newly
@@ -23,6 +24,8 @@ created directory & do the following:
    4) make install
    
 
+
+
 R.J. Clay ("Jame")
-    Robert J. Clay, jame@users.sf.net
+    Robert J. Clay, jame@rocasa.org
     Sysop, 1:120/544@fidonet

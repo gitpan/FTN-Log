@@ -1,5 +1,10 @@
 Revision history for Perl extension FTN::Log.
 
+0.03  Sun Dec 21 2008
+    - Add explicit return to the logging subroutine.
+    - Update email address and home page info in README file.
+    - Minor edits to POD documentation in Log.pm.
+
 0.02  Sat May 13 2006
     - Derive initial version of FTN::Log from FTN::Utility v0.02, which
     contained only the logging function.  Keep the version number, since

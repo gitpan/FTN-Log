@@ -1,4 +1,4 @@
-# Copyright (c) 2001-2006 Robert James Clay.  All Rights Reserved.
+# Copyright (c) 2001-2008 Robert James Clay.  All Rights Reserved.
 # This is free software;  you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 
@@ -21,7 +21,7 @@ require AutoLoader;
 );
 
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 #  Logging subroutine:  logging(logfile, id, text)
 sub logging {
@@ -51,6 +51,8 @@ sub logging {
     print F "$id @text\n";
     
     close(F);
+
+    return;
 
 }
 
@@ -83,11 +85,11 @@ Fidonet Technology Networks (FTN) related processing...
 logging($logfile, $id, @text); 
     $logfile	= the logfile name and path
     $id		= a program descriptor 
-    @text	= the text to be printed 
+    @text	= the text to be printed as the log entry
 
 =head1 AUTHOR
 
-Robert James Clay (R.J. Clay), jame@users.sf.net
+Robert James Clay, jame@users.sf.net
 
 =head1 SEE ALSO
 
