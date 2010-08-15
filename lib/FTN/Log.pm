@@ -1,4 +1,4 @@
-# Copyright (c) 2001-2008 Robert James Clay.  All Rights Reserved.
+# Copyright (c) 2001-2010 Robert James Clay.  All Rights Reserved.
 # This is free software;  you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 
@@ -21,7 +21,7 @@ require AutoLoader;
 );
 
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 #  Logging subroutine:  logging(logfile, id, text)
 sub logging {
@@ -66,8 +66,8 @@ __END__
 
 =head1 NAME
 
-FTN::Log - Perl extension for FTN related logging, for
-Fidonet Technology Networks (FTN) related processing...
+FTN::Log - Perl extension for logging Fidonet Technology Networks
+(FTN) related processing.
 
 =head1 SYNOPSIS
 
@@ -89,7 +89,7 @@ logging($logfile, $id, @text);
 
 =head1 AUTHOR
 
-Robert James Clay, jame@users.sf.net
+Robert James Clay, jame@rocasa.us
 
 =head1 SEE ALSO
 

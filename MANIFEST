@@ -1,7 +1,10 @@
 Changes
 MANIFEST
 Makefile.PL
-Log.pm		
+lib/FTN/Log.pm		
 README
 TODO
-t/test.pl
+t/00-load.t
+t/boilerplate.t
+t/pod-coverage.t 
+t/pod.t

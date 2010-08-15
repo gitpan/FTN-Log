@@ -4,6 +4,7 @@ To do:  FTN::Log
 
 - add selectable log formats
 
-- add test subroutine for logging function to t/test.pl
+- add test subroutine for logging function to t/ directory.
+
   
   

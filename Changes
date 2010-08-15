@@ -1,5 +1,13 @@
 Revision history for Perl extension FTN::Log.
 
+0.04  Sat Aug 14 2010
+    - Move source file Log.pm to lib/FTN/Log.pm.
+    - Add doc/FILE_ID.DIZ file to source repository.
+    - Reword NAME section in Log.pm POD.
+    - Change Author email to jame@rocasa.us.
+    - Update test directory (t/):  remove t/test.pl; add t/00-load.t,
+      t/boilerplate.t, t/pod-coverage.t, and t/pod.t.
+
 0.03  Sun Dec 21 2008
     - Add explicit return to the logging subroutine.
     - Update email address and home page info in README file.
