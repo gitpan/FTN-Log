@@ -1,5 +1,15 @@
 Revision history for Perl extension FTN::Log.
 
+0.05  Wed Aug 18 2010
+    - Rewrite the Makefile.PL file.
+    - Move the TODO file to the doc/ directory.
+    - Add .gitignore to the top level source directory.
+    - Explicitly use warnings pragma in lib/FTN/Log.pm.
+    - Correct the test count in 00-load.t and boilerplate.t.
+    - Remove duplicate entry for 26 Dec 2001 from Changes file.
+    - Reorganize and expand the POD documentation in the module.
+    - Use the 'croak' function from the Carp module in lib/FTN/Log.pm.
+    
 0.04  Sat Aug 14 2010
     - Move source file Log.pm to lib/FTN/Log.pm.
     - Add doc/FILE_ID.DIZ file to source repository.
@@ -18,10 +28,6 @@ Revision history for Perl extension FTN::Log.
     contained only the logging function.  Keep the version number, since
     that is effectively the version of the function, as well as the
     history of changes including copyright.
-    
-0.02  Wed Dec 26 2001
-    - in README;  added installation info & included '2002' in copyright
-    statement.
     
 0.02  Wed Dec 26 2001
     - in README;  added installation info & included '2002' in copyright
