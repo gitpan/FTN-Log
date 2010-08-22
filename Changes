@@ -1,5 +1,9 @@
 Revision history for Perl extension FTN::Log.
 
+0.06  Sat Aug 21 2010
+    - Add LICENSE information to Makefile.PL
+    - Change instances of $logfile to $log_file.
+    
 0.05  Wed Aug 18 2010
     - Rewrite the Makefile.PL file.
     - Move the TODO file to the doc/ directory.

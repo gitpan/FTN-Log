@@ -7,6 +7,7 @@ WriteMakefile(
     AUTHOR		=> 'Robert James Clay <jame@rocasa.us>',
     VERSION_FROM	=> 'lib/FTN/Log.pm',
     ABSTRACT_FROM       => 'lib/FTN/Log.pm',
+    LICENSE        	=> 'perl',
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More' => 0,

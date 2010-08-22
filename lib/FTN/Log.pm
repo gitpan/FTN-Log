@@ -13,11 +13,11 @@ FTN::Log - Perl extension for logging Fidonet Technology Networks (FTN) related 
 
 =head1 VERSION
 
-VERSION 0.05
+VERSION 0.06
 
 =cut
 
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 require Exporter;
 require AutoLoader;
@@ -36,13 +36,13 @@ require AutoLoader;
 
 =head2 logging
 
-Syntax:  logging($logfile, $id, $text);
+Syntax:  logging($log_file, $id, $text);
 
 An FTN compatible Logging subroutine, where: 
 
 =over
 
-=item	$logfile Filename and path to the log file. Can also be STDOUT or STDERR.
+=item	$log_file Filename and path to the log file. Can also be STDOUT or STDERR.
 
 =item	$id	Short string than can identify which program is doing the logging.
 
@@ -53,7 +53,7 @@ An FTN compatible Logging subroutine, where:
 =cut
 
 sub logging {
-    my($logfile, $id, @text) = @_;
+    my($log_file, $id, @text) = @_;
     local(*F);
     my @x;
     my @month = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
@@ -61,14 +61,14 @@ sub logging {
 
     
     # write to the log file
-    if($logfile eq "stdout") {
-        open(F, ">&STDOUT") || croak "$id: can't open log $logfile\n";
+    if($log_file eq "stdout") {
+        open(F, ">&STDOUT") || croak "$id: can't open log $log_file\n";
     }
-    elsif($logfile eq "stderr") {
-        open(F, ">&STDERR") || croak "$id: can't open log $logfile\n";
+    elsif($log_file eq "stderr") {
+        open(F, ">&STDERR") || croak "$id: can't open log $log_file\n";
     }
     else {
-        open(F, ">>$logfile") || croak "$id: can't open log $logfile\n";
+        open(F, ">>$log_file") || croak "$id: can't open log $log_file\n";
     }
 	
     @x = localtime;

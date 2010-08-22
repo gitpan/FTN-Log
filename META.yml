@@ -1,8 +1,8 @@
 --- #YAML:1.0
 name:                FTN-Log
-version:             0.05
+version:             0.06
 abstract:            Perl extension for logging Fidonet Technology Networks (FTN) related processing.
-license:             ~
+license:             perl
 author:              
     - Robert James Clay <jame@rocasa.us>
 generated_by:        ExtUtils::MakeMaker version 6.42

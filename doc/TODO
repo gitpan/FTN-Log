@@ -1,7 +1,5 @@
 To do:  FTN::Log
 
-- The license section is not being listed in META.yml from 'make dist'.
-
 - add verbose option? if decide it should be part of subroutine.
 
 - add selectable log formats
