@@ -5,7 +5,7 @@ package FTN::Log;
 use warnings;
 use strict;
 use Carp qw( croak );
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+use vars qw($VERSION @ISA @EXPORT_OK);
 
 =head1 NAME
 
@@ -13,23 +13,17 @@ FTN::Log - Perl extension for logging Fidonet Technology Networks (FTN) related 
 
 =head1 VERSION
 
-VERSION 0.06
+VERSION 0.10
 
 =cut
 
-$VERSION = '0.06';
+$VERSION = '0.10';
 
 require Exporter;
-require AutoLoader;
 
-@ISA = qw(Exporter AutoLoader);
-# Items to export into callers namespace by default. Note: do not export
-# names by default without a very good reason. Use EXPORT_OK instead.
-# Do not simply export all your public functions/methods/constants.
-@EXPORT = qw(
-);
+@ISA = qw(Exporter);
 @EXPORT_OK = qw(&logging
-	
+
 );
 
 =head1 FUNCTIONS
@@ -42,46 +36,49 @@ An FTN compatible Logging subroutine, where:
 
 =over
 
-=item	$log_file Filename and path to the log file. Can also be STDOUT or STDERR.
+=item   $log_file
 
-=item	$id	Short string than can identify which program is doing the logging.
+ Filename and path to the log file. Can also be STDOUT or STDERR.
 
-=item	$text	A string containing what is being logged.
+=item   $id
+
+Short string than can identify which program is doing the logging.
+
+=item   $text
+
+    A string containing what is being logged.
 
 =back
-     
+
 =cut
 
 sub logging {
-    my($log_file, $id, @text) = @_;
-    local(*F);
-    my @x;
+    my($log_file, $id, $log_text) = @_;
+    my (@x, $fh);
     my @month = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-	     'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' );
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' );
 
-    
     # write to the log file
     if($log_file eq "stdout") {
-        open(F, ">&STDOUT") || croak "$id: can't open log $log_file\n";
+        open( $fh, q{>}, *STDOUT ) || croak "Cannot open STDOUT for logging.";
     }
     elsif($log_file eq "stderr") {
-        open(F, ">&STDERR") || croak "$id: can't open log $log_file\n";
+        open( $fh, q{>}, *STDERR ) || croak "Cannot open STDERR for logging.";
     }
     else {
-        open(F, ">>$log_file") || croak "$id: can't open log $log_file\n";
+        open( $fh, q{>>}, $log_file ) || croak "Cannot open $log_file for logging.";
     }
-	
-    @x = localtime;
-    printf F "%s %02d %02d:%02d:%02d ",
-	   $month[$x[4]], $x[3], $x[2], $x[1], $x[0]; 
-    print F "$id @text\n";
-    
-    close(F);
 
-    return;
+    @x = localtime;
+    printf $fh "%s %02d %02d:%02d:%02d ",
+        $month[$x[4]], $x[3], $x[2], $x[1], $x[0]; 
+    print $fh "$id $log_text\n";
+
+    close($fh);
+
+    return 1;
 
 }
-
 
 =head1 AUTHOR
 
@@ -123,17 +120,15 @@ L<http://search.cpan.org/dist/FTN-Log>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2001-2010 Robert James Clay, all rights reserved.
+Copyright 2001-2012 Robert James Clay, all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-"L<perl(1)>"
+L<Perl for FTN Systems|http://ftnpl.sourceforge.net/>
 
 =cut
 
 1; # End of FTN::Log
-
-__END__

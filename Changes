@@ -1,9 +1,31 @@
 Revision history for Perl extension FTN::Log.
 
+0.10  Fri Sep 21 2012 15:42
+    - Remove t/boilerplate.t as it is no longer needed.
+    - Change the name & type of '@text' variable to the scalar 'log_text'.
+    - Explicitly return a '1' from the logging function to indicate success.
+    - Add initial version of t/01-basic.t test script and update Makefile.PL.
+
+0.09  Fri Sep 21 2012 14:08
+    - Explicitly use '*' for opening STDOUT and STDERR.
+    - Rewrite failure messages for when log file cannot be opened.
+    - Use 'my' instead of 'local' for the filehandle variable in the logger
+      subroutine.
+
+0.08  Fri Sep 21 2012 12:29
+    - Remove usage of Autosplit from module as it not unneeded.
+    - Change SEE ALSO link to point to ftnpl.sourceforge.net site.
+    - Useing @EXPORT_OK so do not need @EXPORT in lib/FTN/Log.pm.
+
+0.07  Fri Sep 21 2012 11:18
+    - Update the end year for the copyright years to 2012.
+    - Cleanup of POD, white space, and tabs in lib/FTN/Log.pm file.
+    - Change bare word file handle 'F' to a 'fh' variable.
+
 0.06  Sat Aug 21 2010
     - Add LICENSE information to Makefile.PL
     - Change instances of $logfile to $log_file.
-    
+
 0.05  Wed Aug 18 2010
     - Rewrite the Makefile.PL file.
     - Move the TODO file to the doc/ directory.
@@ -13,7 +35,7 @@ Revision history for Perl extension FTN::Log.
     - Remove duplicate entry for 26 Dec 2001 from Changes file.
     - Reorganize and expand the POD documentation in the module.
     - Use the 'croak' function from the Carp module in lib/FTN/Log.pm.
-    
+
 0.04  Sat Aug 14 2010
     - Move source file Log.pm to lib/FTN/Log.pm.
     - Add doc/FILE_ID.DIZ file to source repository.
@@ -32,11 +54,11 @@ Revision history for Perl extension FTN::Log.
     contained only the logging function.  Keep the version number, since
     that is effectively the version of the function, as well as the
     history of changes including copyright.
-    
+
 0.02  Wed Dec 26 2001
     - in README;  added installation info & included '2002' in copyright
     statement.
-    
+
 0.02  Sat Dec  16 2001; by R.J. Clay
     - Rewrite of logging subroutine
     - Corrected NAME reference in MakeFile.PL;  module now installs
